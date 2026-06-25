@@ -1,4 +1,4 @@
-2 Python-Programming-Tasks!
+💻|Python-Programming-Tasks!
 
 1️⃣ Hangman Game
    → A classic word-guessing game in the terminal
@@ -10,7 +10,12 @@
    → Used: if-else, functions, string matching
    → Responds to basic greetings and questions
 
-# Python-Programming-Tasks
+# 🚀 Python-Programming-Tasks
 Task 1: Hangman Game
 Task 2: Basic Chatbot
+
+# 🤔 How to Run
+python hangman.py
+python chatbot.py
+
 By: CodesByMariam
