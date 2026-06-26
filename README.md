@@ -1,6 +1,7 @@
 💻| Hangman-Game Project 
 
 ➡️ Hangman Game
+
    → A classic word-guessing game in the terminal
    
    → Used: loops, random module, string manipulation
