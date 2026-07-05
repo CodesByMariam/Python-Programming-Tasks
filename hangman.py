@@ -1,43 +1,43 @@
 import random
 
-# 5 words ki list
+# List of 5-letter words
 words = ["python", "code", "apple", "mouse", "book", "girl", "mobile"]
 word = random.choice(words)
 
-guessed = ["_"] * len(word) # _ _ _ _ bana de ga
+guessed = ["_"] * len(word) # it will make _ _
 lives = 6
 guessed_letters = []
 
-print("🎮 Hangman Game Shuru!")
-print(f"Word mein {len(word)} letters hain")
+print("🎮 Hangman Game Started!")
+print(f"The word has {len(word)} letters")
 print(" ".join(guessed))
-print(f"Tumhare paas {lives} chances hain\n")
+print(f"You have {lives} chances\n")
 
 while lives > 0 and "_" in guessed:
-    guess = input("Letter btao: ").lower()
+    guess = input("Enter a letter: ").lower()
 
-    # Agar pehle likh chuki ho wo letter
+    # If you already tried this letter
     if guess in guessed_letters:
-        print("Ye letter to pehle try kar chuki ho! 😄")
+        print("You already tried this letter! 😄")
         continue
 
     guessed_letters.append(guess)
 
-    # Agar letter sahi hai
+    # If the letter is correct
     if guess in word:
         for i in range(len(word)):
             if word[i] == guess:
                 guessed[i] = guess
-        print("Wah! Sahi pakra! 👏")
+        print("Great! Correct guess! 👏")
     else:
         lives -= 1
-        print(f"Galat! {lives} chances baqi rahe 😔")
+        print(f"Wrong! You have {lives} chances left 😔")
 
     print(" ".join(guessed))
     print("Used letters:", ", ".join(guessed_letters), "\n")
 
-# Game khatam
+# Game over
 if "_" not in guessed:
-    print(f"🎉 Jeet gayi! Word tha: {word}")
+    print(f"🎉 You Won! The word was: {word}")
 else:
-    print(f"💀 Haar gayi! Word tha: {word}")
+    print(f"💀 You Lost! The word was: {word}")
